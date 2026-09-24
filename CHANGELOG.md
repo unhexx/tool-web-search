@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- README с бейджами релиза, тестов, Python, лицензии и loopback.
+- Описание API, переменных окружения и формата корпуса: `docs/API.md`, `docs/CONFIGURATION.md`, `docs/CORPUS.md`.
+
 ## 1.1.1
 
 - `secret_key` SearXNG больше не хранится в git. `deploy/searxng/init-settings.sh` при первом старте пишет ключ в volume `searxng_data` и на следующих запусках его не меняет.
