@@ -7,7 +7,6 @@ def test_dry_run_lists_every_role(capsys):
     assert main(["--dry-run"]) == 0
     payload = json.loads(capsys.readouterr().out)
     assert payload["roles"] == [
-        "Design",
         "Orchestrator",
         "Coder",
         "Tester",

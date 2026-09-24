@@ -12,5 +12,5 @@
 
 ## S3 — релиз
 
-- [ ] Пять идей в `docs/LOOP.md`
-- [ ] Версия 1.1.0, CHANGELOG, GitHub Release
+- [x] Пять идей в `docs/LOOP.md`
+- [x] Версия 1.1.0, CHANGELOG, GitHub Release
