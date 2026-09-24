@@ -11,6 +11,18 @@ https://docs.x.ai/developers/tools/advanced-usage#mixing-server-side-and-client-
 Tasks that do not need a third-party network service run entirely in this process.
 Bind address is `127.0.0.1` only.
 
+## Dev loop
+
+Две команды. Шаблон лежит рядом (`../agentic_loop_template`) и не копируется в git.
+Живой Grok идёт в шлюз `127.0.0.1:8110`, тот спереди pxpipe `127.0.0.1:8100`.
+Mock и тесты в модель не ходят.
+
+```bash
+./init
+source .venv/bin/activate
+python -m memory.proxy health
+```
+
 ## Run
 
 ```bash
