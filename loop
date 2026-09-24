@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Второй шаг: роли Design → Orchestrator → Coder → Tester → Debugger → Reviewer.
+# Второй шаг: Orchestrator → Coder → Tester → Debugger → Reviewer.
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$ROOT"

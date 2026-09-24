@@ -63,6 +63,7 @@ Copyright 2026 Evgeniy Chistyakov · https://exception.expert
 ## Документы для агентов
 
 - [Дизайн](docs/DESIGN.md)
+- [Цикл и сжатие контекста](docs/LOOP.md)
 - [Очередь задач](docs/AGENT_TASKS.md)
 - [AGENTS.md](AGENTS.md)
 

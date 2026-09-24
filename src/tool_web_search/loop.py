@@ -13,7 +13,8 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-ROLES = ("Design", "Orchestrator", "Coder", "Tester", "Debugger", "Reviewer")
+# Контракт шаблона. Design — это документы на диске (docs/DESIGN.md, .agent/PLAN.md), не шестая роль супервизора.
+ROLES = ("Orchestrator", "Coder", "Tester", "Debugger", "Reviewer")
 GATEWAY = "http://127.0.0.1:8110/health"
 
 
@@ -48,7 +49,7 @@ def describe(adapter: str, max_cycles: int, create_pr: bool) -> dict:
         "proxy": "skip" if adapter == "mock" else "required",
         "pxpipe": "http://127.0.0.1:8100",
         "gateway": "http://127.0.0.1:8110",
-        "design_gate": ".agent/PLAN.md",
+        "plan": ".agent/PLAN.md",
         "command": supervisor_command(adapter, max_cycles, create_pr),
     }
 
