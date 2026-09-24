@@ -57,6 +57,7 @@ your loop must `POST /v1/invoke`.
 - `no-new-privileges`, `cap_drop: ALL`, read-only root, tmpfs `/tmp`
 - published on loopback only
 - bearer `TOOL_TOKEN` (default `local` — change before any non-loopback bind)
+- SearXNG `secret_key` не в git: его создаёт `deploy/searxng/init-settings.sh` в volume `searxng_data`
 
 Copyright 2026 Evgeniy Chistyakov · https://exception.expert
 

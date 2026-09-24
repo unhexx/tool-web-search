@@ -3,7 +3,8 @@
 use_default_settings: true
 
 server:
-  secret_key: "tool-web-search-local-dev-not-ultrasecretkey"
+  # Плейсхолдер. Живой ключ пишет deploy/searxng/init-settings.sh в volume.
+  secret_key: "__SEARXNG_SECRET_KEY__"
   limiter: false
   public_instance: false
   image_proxy: false
