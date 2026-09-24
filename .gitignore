@@ -26,6 +26,8 @@ compose.env
 .agent/knowledge/
 .agent/LOOP_STATE.json
 .agent/LOOP_STATE.md
+.agent/metrics.jsonl
+.agent/heartbeat.json
 .env.agentic
 .env.blackbox
 blackbox_start_prompt.txt

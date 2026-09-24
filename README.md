@@ -19,9 +19,14 @@ Mock и тесты в модель не ходят.
 
 ```bash
 ./init
-source .venv/bin/activate
-python -m memory.proxy health
+./loop --dry-run
+./loop
+./loop --live
 ```
+
+`./loop` гоняет mock и в модель не ходит. `./loop --live` стартует только если шлюз и pxpipe отвечают.
+
+Выдачу можно ужать до бюджета символов: аргумент `budget_chars` или `WEB_CONTEXT_BUDGET_CHARS`. URL не режутся, сжимается snippet и отваливается хвост выдачи. Это слой инструмента. pxpipe сжимает уже запрос к модели.
 
 ## Run
 

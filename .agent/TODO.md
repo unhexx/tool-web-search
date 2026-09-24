@@ -5,17 +5,12 @@
 - [x] `./init` → `INIT_OK`, import memory, прокси в activate
 - [x] Контрактный тест на `init` / `Agent-Init.sh` без сети
 
-## S2 — дизайн
+## S2 — продукт
 
-- [ ] Пять идей и выбор среза 1.1.0 в `docs/DESIGN.md`
+- [x] Бюджет выдачи, канонический URL, картинки корпуса, путь `./corpus`
+- [x] `./loop`, dry-run, mock-цикл до PR_READY
 
-## S3 — продукт
+## S3 — релиз
 
-- [ ] Бюджет выдачи и путь корпуса
-- [ ] `./loop` и `./loop --dry-run`
-- [ ] Mock-цикл supervisor до DONE
-
-## S4 — релиз
-
-- [ ] README и CHANGELOG
-- [ ] Версия 1.1.0, merge в main, GitHub Release
+- [ ] Пять идей в `docs/LOOP.md`
+- [ ] Версия 1.1.0, CHANGELOG, GitHub Release
