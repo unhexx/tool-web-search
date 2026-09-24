@@ -1,0 +1,12 @@
+# Файл нужен образу SearXNG 2026, иначе warning про missing config.
+
+[botdetection.ip_limit]
+link_token = false
+
+[botdetection.ip_lists]
+block_ip = []
+pass_ip = [
+  "127.0.0.0/8",
+  "::1",
+]
+

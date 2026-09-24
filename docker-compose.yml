@@ -1,5 +1,10 @@
 name: tool-web-search
 
+# По умолчанию — только локальный корпус (TOOL_OFFLINE=1).
+# Живой метапоиск:
+#   docker compose --profile searxng up -d --build
+#   TOOL_OFFLINE=0 SEARXNG_URL=http://searxng:8080
+
 services:
   tool:
     build: .
@@ -13,9 +18,10 @@ services:
       TOOL_OFFLINE: "${TOOL_OFFLINE:-1}"
       WEB_CORPUS: /app/corpus/index.json
       SEARXNG_URL: "${SEARXNG_URL:-}"
-
     volumes:
       - ./corpus:/app/corpus:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     security_opt:
       - "no-new-privileges:true"
     cap_drop:
@@ -32,3 +38,30 @@ services:
       timeout: 5s
       start_period: 10s
       retries: 5
+
+  searxng:
+    profiles: ["searxng"]
+    image: docker.io/searxng/searxng:latest
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      - SEARXNG_BASE_URL=http://127.0.0.1:8080/
+    volumes:
+      - searxng_data:/etc/searxng
+      - ./deploy/searxng/settings.yml:/etc/searxng/settings.yml:ro
+      - ./deploy/searxng/limiter.toml:/etc/searxng/limiter.toml:ro
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/healthz"]
+      interval: 30s
+      timeout: 10s
+      start_period: 20s
+      retries: 5
+    security_opt:
+      - "no-new-privileges:true"
+    restart: unless-stopped
+
+volumes:
+  searxng_data:
+
