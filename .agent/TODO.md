@@ -14,3 +14,8 @@
 
 - [x] Пять идей в `docs/LOOP.md`
 - [x] Версия 1.1.0, CHANGELOG, GitHub Release
+
+## S4 — секрет SearXNG
+
+- [x] T-007: `secret_key` в volume при первом старте, не в git
+- [x] Версия 1.1.1, тег и GitHub Release

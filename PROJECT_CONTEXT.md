@@ -15,7 +15,7 @@
 
 | Field | Value |
 |-------|-------|
-| **Cycle Number** | 3 |
+| **Cycle Number** | 4 |
 | **Current Phase** | release |
 | **Status** | DONE |
 | **Confidence** | 0.9 |
@@ -25,6 +25,7 @@
 - Шаблон не копируем: `./init` делает симлинк на `../agentic_loop_template` (или `AGENTIX_TEMPLATE`).
 - Mock и CI не ходят в модель. Живой Grok только через шлюз в pxpipe.
 - Сжатие выдачи поиска — обычный бюджет символов в процессе инструмента. pxpipe сжимает запрос к модели, а не JSON SearXNG.
+- `secret_key` SearXNG не коммитится. Его пишет init-скрипт в volume при первом старте.
 
 ## Permanent Rules
 

@@ -18,8 +18,9 @@ SearXNG в этом репо:
 - образ `searxng/searxng`
 - порт `127.0.0.1:8080`
 - JSON включён (`formats: [html, json]`)
-- `public_instance: false`, limiter выключен, settings/limiter смонтированы `:ro`
-- ключ локальный, не для публичного инстанса
+- `public_instance: false`, limiter выключен
+- шаблон settings и limiter смонтированы `:ro`; живой `settings.yml` лежит в volume `searxng_data`
+- `secret_key` в git нет. `deploy/searxng/init-settings.sh` пишет его в volume при первом старте и дальше не меняет
 
 Можно не поднимать свой SearXNG, а указать уже существующий инстанс шаблона `agentic_loop_template` (`SEARXNG_URL=http://127.0.0.1:8080`).
 

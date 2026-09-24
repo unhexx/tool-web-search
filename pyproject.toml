@@ -1,6 +1,6 @@
 [project]
 name = "tool-web-search"
-version = "1.1.0"
+version = "1.1.1"
 description = "Local web_search over corpus + optional self-hosted SearXNG"
 readme = "README.md"
 requires-python = ">=3.11"
