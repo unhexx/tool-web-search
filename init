@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Первый шаг из двух: шаблон цикла, venv, pxpipe в activate, пакет инструмента.
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$ROOT"
+bash Agent-Init.sh "$@"
+# shellcheck disable=SC1091
+source .venv/bin/activate
+python -m pip install -e ".[dev]"
+echo "INIT_OK"
+echo "Дальше: ./loop"

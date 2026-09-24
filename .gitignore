@@ -9,3 +9,23 @@ data/runtime/
 compose.env
 *.egg-info/
 .DS_Store
+
+# Шаблон — симлинк на соседний SSOT, дерево не копируем.
+/agentic_loop_template
+.agent/handoff_*.json
+.agent/last_handoff.json
+.agent/worktrees/
+.agent/history/
+.agent/STOP
+.agent/proxy_events.jsonl
+.agent/proxy_cache.sqlite
+.agent/proxy_cache.sqlite-*
+.agent/sft/
+.agent/stream_leases.json
+.agent/streams_state.json
+.agent/knowledge/
+.agent/LOOP_STATE.json
+.agent/LOOP_STATE.md
+.env.agentic
+.env.blackbox
+blackbox_start_prompt.txt
