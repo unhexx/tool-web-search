@@ -19,3 +19,5 @@ curl -sS -H 'Authorization: Bearer local' -H 'Content-Type: application/json' \
 ```
 
 Если SearXNG уже запущен из `agentic_loop_template` (`127.0.0.1:8080`), второй инстанс не поднимать: задать `SEARXNG_URL=http://host.docker.internal:8080` и работать без профиля `searxng`.
+
+Тот же порт занимает `python -m memory.stack search` в шаблоне. Это один процесс SearXNG на машину, не второй движок. Клиент инструмента и клиент стека ходят в один JSON `/search`. Пример переменных — `compose.env.example`.

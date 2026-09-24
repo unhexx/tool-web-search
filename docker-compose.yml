@@ -18,6 +18,7 @@ services:
       TOOL_OFFLINE: "${TOOL_OFFLINE:-1}"
       WEB_CORPUS: /app/corpus/index.json
       SEARXNG_URL: "${SEARXNG_URL:-}"
+      WEB_CONTEXT_BUDGET_CHARS: "${WEB_CONTEXT_BUDGET_CHARS:-}"
     volumes:
       - ./corpus:/app/corpus:ro
     extra_hosts:

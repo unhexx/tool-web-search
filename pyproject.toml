@@ -13,6 +13,7 @@ dev = ["pytest>=8.0,<9"]
 
 [project.scripts]
 tool-web-search = "tool_web_search.server:main"
+tool-web-search-loop = "tool_web_search.loop:main"
 
 [build-system]
 requires = ["setuptools>=68"]
